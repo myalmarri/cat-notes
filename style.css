@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: #f6ecdc;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* MAIN SCENE */
+
+.scene {
+    width: 520px;
+    min-height: 100vh;
+    background-image: url("bg.png");
+    background-repeat: repeat;
+    position: relative;
+    overflow: visible;
+}
+
+/* BOARD */
+
+.board {
+    width: 440px;
+    min-height: unset;
+    height: 220px;
+
+    background: #b89b88;
+    border: 3px solid #8b6f5d;
+    border-radius: 20px;
+
+    position: absolute;
+
+    top: 120px;
+    left: 40px;
+    padding-bottom: 80px;
+
+}
+
+/* TITLE */
+
+.board h1 {
+    color: whitesmoke;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* NOTES GRID */
+
+#notesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+    margin: 20px;
+}
+
+/* TABLE */
+
+.table {
+    width: 100%;
+    height: 60px;
+
+    background: #b89b88;
+    border-top: 3px solid #8b6f5d;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+
+    z-index: 1;
+}
+
+/* CAT */
+
+.catlaying {
+    width: 170px;
+    bottom: -20px;
+    left: calc(50% - 260px);
+    position: absolute;
+
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+/* BUTTON IMAGE */
+
+.addmore {
+    width: 100px;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    bottom: 10px;
+    left: 230px;
+
+    z-index: 3;
+    transition: 0.25s ease;
+}
+
+.addmore:hover{
+    transform: translateY(-5px) rotate(-4deg) scale(1.05);
+}
+
+/* NOTES IMAGE */
+
+.cat-note {
+    width: 90px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cat-note:hover{
+    transform: translateY(-4px) rotate(-2deg);
+}
+
+.note-modal {
+    display: none;
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, 0.2);*/
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+}
+
+.opened-note {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    filter: drop-shadow(0 10px 20px rgba(254, 252, 252, 0.1));
+}
+
+.opened-note-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /*content: url("openNote.png");*/
+}
+
+.opened-note textarea {
+    position: absolute;
+    top: 90px;
+    left: 55px;
+    width: 220px;
+    height: 150px;
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #5f4b3e;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    caret-color: #8b6f5d;
+    transition: 0.2s;
+}
+
+.opened-note textarea:focus{
+    transform:scale(1.01);
+}
+
+/* SCROLL */
+.opened-note textarea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.opened-note textarea::-webkit-scrollbar-thumb {
+    background: #c2a995;
+    border-radius: 10px;
+}
+
+#closeNote {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: 2px solid #8b6f5d;
+    border-radius: 5px;
+    background: #f6ecdc;
+    color: #5f4b3e;
+
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* refill */
+.refill-modal {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.refill-box {
+    background: #f6ecdc;
+    border: 2px solid #8b6f5d;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: #5f4b3e;
+    font-size: 16px;
+}
+
+.refill-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.refill-buttons button {
+    background: #b89b88;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+.refill-buttons button:hover {
+    transform: scale(1.05);
+}

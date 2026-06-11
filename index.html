@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Notes!</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="scene">
+
+    <div class="board">
+      <h1> Before the Cofee Gets Cold</h1>
+      
+      <div id="notesGrid"></div>
+    </div>
+
+    <div class="table">
+      <img src="/assets/mugButton/addmore6.PNG" class="addmore" id="addmoreBtn" />
+    </div>
+
+    <img src="/assets/catLaying/catlaying1.png" class="catlaying" />
+    
+    <div id="noteModal" class="note-modal">
+      <div class="opened-note">
+        <img src="/assets/notes/openNote.PNG" class="opened-note-img" />
+        <textarea placeholder="Leave a little note...!"></textarea>
+        <button id="closeNote">×</button>
+      </div>
+    </div>
+
+    <div id="refillModal" class="refill-modal">
+      <div class="refill-box">
+        <p><b> ૮ ྀི◞ ⸝⸝ ◟ ྀིა </b></p>
+        <p><b> all out of coffee! </b></p>
+        <p> would you like a <i>refill </i>?</p>
+        <div class="refill-buttons">
+          <button id="refillYes">yes please !</button>
+          <button id="refillNo">not yet !</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
