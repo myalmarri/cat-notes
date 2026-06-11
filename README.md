@@ -1,6 +1,6 @@
 # cat-notes
 
-<h2 align="center">ʚbefore the coffee gets coldɞ</h2>
+<h2 align="center"> before the coffee gets cold </h2>
 
 
 ꒰ a cozy little note app where ‘changeable’ cats help you remember ! ꒱
@@ -11,5 +11,5 @@
 
 ・・built with html · css · javascript !
 
-!! Although, this was primarily just to get hands on experience with javascript ˃ᴗ˂ 
+!! Although, this was primarily just to get hands on experience with javascript ˃ᴗ˂   
 !! reuploaded QAQ
